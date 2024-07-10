@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh Kadariya</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1f11bcc356.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+</head>
+
+<body>
+
+    <div class="cointainer">
+        <div class="sidebar sidebarGo">
+
+            <nav>
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li> <a href="/myintro.html">My Intro</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li><a href="/Testimonial.html">Testimonial</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="hamburger">
+                <img class="ham" src="image/hamburger.png" alt="" width="23px">
+                <img class="cross" src="image/cross-sign.png" alt="" width="23px">
+            </div>
+
+            <div class="infocointainer">
+                <div id="services">
+
+                    <h3 class="sub-title-1">
+                        My Team
+                    </h3>
+                    <div class="services-list">
+                        <div>
+
+                            <h2>Mr. Rijan Chapagai</h2>
+                            <img src="image/Chapagain Ji.jpg" alt="Rijan Chapagain ">
+                            <p>Mr. Rijan excels on app designning, proficient in creating user-centric, useful mobile applications using programming languages like Java, Kotlin and Swift.</p>
+                            <a href="https://www.facebook.com/rijan.chapaigai"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+
+                            <h2>Ms. Shreya Duwadi</h2>
+                            <img src="image/Duwadi.jpg" alt="Shreya Duwadi">
+                            <p>Ms. Shreya utilizes a range of cutting-edge tools and software to enhance her UI/UX designs, including Adobe XD, Sketch, Figma, and InVision </p>
+                            <a href="https://www.facebook.com/shreya.duwadi"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+
+                            <h2>Mr. Rohit Sharma</h2>
+                            <img src="image/Sharma JI.jpg" alt="Rohit Sharma">
+                            <p>Mr. Rohit is a web designer who creates visually stunning websites using tools like Adobe Photoshop, Illustrator, HTML/CSS, and JavaScript.</p>
+                            <a href="https://www.facebook.com/profile.php?id=100036553642204"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebarGo');
+            if (document.querySelector('.sidebar').classList.contains('sidebarGo')) {
+                document.querySelector('.ham').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+            } else {
+                document.querySelector('.ham').style.display = 'none'
+                setTimeout(() => {
+
+                        document.querySelector('.cross').style.display = 'inline'
+                    }, 300
+
+                )
+
+            }
+        })
+        $('.carousel').owlCarousel({
+            margin: 20,
+            loop: true,
+            // autoplay: true,
+            autoplayTimeOut: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+
+                },
+                600: {
+                    items: 2,
+                    nav: false,
+
+                },
+                1000: {
+                    items: 3,
+                    nav: false,
+
+                }
+
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

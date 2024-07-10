@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Ramesh Kadariya</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1f11bcc356.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="cointainer">
+        <div class="sidebar sidebarGo">
+
+            <nav>
+                <ul>
+                    <li><a href="/home.html">Home</a></li>
+                    <li> <a href="/myintro.html">My Intro</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li><a href="/Testimonial.html">Testimonial</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="hamburger">
+                <img class="ham" src="image/hamburger.png" alt="" width="23px">
+                <img class="cross" src="image/cross-sign.png" alt="" width="23px">
+            </div>
+
+            <div class="infocointainer">
+                <div id="services">
+
+                    <h3 class="sub-title-1">
+                        My Services
+                    </h3>
+                    <div class="services-list">
+                        <div>
+                            <i class="fa-sharp fa-solid fa-code"></i>
+                            <h2>Web Design</h2>
+                            <p>Web page development involves the design, creation, and implementation of web pages using various programming languages, markup, and styling techniques to create functional and visually appealing online content</p>
+                            <a href="https://brandcurb.com/en/services/website-design-development/?gclid=Cj0KCQjw8NilBhDOARIsAHzpbLBRQzVfYP833cOsshOctLY3iMtGESXLrqAbleWd24OLtesJyZ3SslkaAhHfEALw_wcB">Learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-uikit"></i>
+                            <h2>UI/UX Design</h2>
+                            <p>
+                                UI/UX design encompasses the meticulous process of creating intuitive and visually appealing user interfaces, coupled with a seamless and delightful user experience, to ensure optimal usability and user satisfaction in digital products and applications.
+                            </p>
+                            <a href="https://www.uxpin.com/studio/blog/13-useful-ui-design-articles-ux-practitioners/">Learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-app-store"></i>
+                            <h2>App Design</h2>
+                            <p>App design is the intricate art of conceptualizing, planning, and crafting user-centric mobile applications, encompassing the harmonious integration of aesthetics, functionality, and usability to deliver compelling and engaging
+                                experiences to the end-users. </p>
+                            <a href="https://developer.ibm.com/technologies/mobile/articles/">Learn more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebarGo');
+            if (document.querySelector('.sidebar').classList.contains('sidebarGo')) {
+                document.querySelector('.ham').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+            } else {
+                document.querySelector('.ham').style.display = 'none'
+                setTimeout(() => {
+
+                        document.querySelector('.cross').style.display = 'inline'
+                    }, 300
+
+                )
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>

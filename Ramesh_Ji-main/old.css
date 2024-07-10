@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Source+Code+Pro&display=swap');
+body {
+    padding: 0px;
+    margin: 0px;
+    background: url('image/back.jpg');
+    background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: 10px; */
+}
+
+.sidebar {
+    position: absolute;
+    background-color: rgb(58, 63, 64);
+    /* width: 350px; */
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    transition: transform 0.3s ease-in;
+}
+
+.sidebar nav {
+    padding: 30px;
+    color: rgb(13, 172, 19);
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 30px;
+    padding: 30px 0px;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: rgb(13, 172, 19);
+}
+
+.main {
+    /* background-color: rgb(238, 238, 11); */
+    width: 80vh;
+}
+
+.cointainer {
+    display: flex;
+}
+
+.infocointainer {
+    height: 58vh;
+    width: 150vh;
+    margin: 150px 125px;
+    /* margin: 144px auto; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.devinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-left: 633px; */
+}
+
+.hello {
+    font-size: 65px;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: 'Source Code Pro', monospace; */
+    color: rgb(245, 241, 241);
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    color: rgb(251, 246, 246);
+}
+
+.about {
+    font-size: 50px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(237, 229, 229);
+}
+
+.main .option {
+    margin-left: 15px;
+    height: 75px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.option li {
+    list-style: none;
+    color: orange;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 5s steps(4) infinite;
+    margin-left: 55px;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.button {
+    margin-top: 22px;
+}
+
+.button button {
+    cursor: pointer;
+    background-color: rgb(47, 25, 211);
+    color: rgb(245, 241, 241);
+    width: 150px;
+    height: 35px;
+    border-radius: 25em;
+    border: 2px solid blue
+}
+
+.button button:hover {
+    background-color: white;
+    color: black;
+}
+
+.devpic img {
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+}
+
+.devpic {
+    /* display: none; */
+}
+
+
+/* Contact started from here */
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.sub-tittle {
+    margin-left: 120px;
+}
+
+.contact-left p i {
+    margin-right: 15px;
+    color: #e70e0e;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.contact-left p i:hover {
+    color: rgb(41, 9, 223);
+    transform: translate(+5px);
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ca1f1f;
+    display: inline-block;
+    transition: transform 0.5s;
+    margin-left: 10px;
+}
+
+.social-icons a:hover {
+    color: rgb(41, 9, 223);
+    transform: translate(+5px);
+}
+
+.btn {
+    cursor: pointer;
+    background-color: rgb(244, 11, 42);
+    color: rgb(21, 20, 21);
+    font-weight: bold;
+    width: 125px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 255, 204)
+}
+
+.btn:hover {
+    background-color: rgb(155, 165, 234);
+    color: black;
+}
+
+.contact-right {
+    width: 110%;
+    margin-left: 10px;
+}
+
+form input,
+form textarea {
+    text-align: center;
+    width: 90%;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0px;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 6px;
+}
+
+.contact-right form {}
+
+.copyright {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: 300;
+    margin: 10px;
+    font: 50px;
+}
+
+*/
+/* Abouut section started here */
+
+#about {
+    padding: 50px 0;
+    color: #1b1a1a;
+}
+
+.row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sub-title {
+    font-family: monospace;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+    color: rgb(255, 254, 254);
+    text-decoration: solid;
+    margin-top: 10px;
+}
+
+.about-me {
+    font-size: 50px;
+    color: rgb(27, 26, 26);
+    margin-left: 55px;
+    margin-top: 2px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 80%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 0px -30px;
+    font-size: 20px;
+}
+
+.tab-contents ul li span {
+    color: rgb(57, 18, 211);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+/* Hamburger and cross bar  */
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+.ham {
+    margin-top: 10px;
+}
+
+.cross {
+    margin-left: 190px;
+}
+
+.sidebarGo {
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+
+
+/*------------services started--------*/
+
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: rgb(66, 223, 14);
+    color: white;
+    padding: 40px;
+    font-size: 1.3em;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.5s;
+}
+
+.sub-title-1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: -2em;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: rgb(242, 249, 245);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: rgb(230, 24, 5);
+    transform: translate(-10px);
+}
+
+
+/*<------------My teams started------------>*/
+
+.teams .title::after {
+    content: "My Teams";
+}
+
+.teams .carousel .card {
+    background: #255;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+    background: blue;
+}
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid brown;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover img {
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid green!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: green!important;
+}

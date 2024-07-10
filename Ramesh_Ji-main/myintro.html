@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh Kadariya</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="cointainer">
+        <div class="sidebar sidebarGo">
+
+            <nav>
+                <ul>
+                    <li><a href="/index.html"> Home</a></li>
+                    <li><a href="/myintro.html"> My Intro</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li><a href="/Testimonial.html">Testimonial</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="about-me">
+            <div class="hamburger">
+                <img class="ham" src="image/hamburger.png" alt="" width="23px">
+                <img class="cross" src="image/cross-sign.png" alt="" width="23px">
+            </div>
+
+            <div class="row">
+                <div class="about-col-2">
+                    <h3 class="sub-title">
+                        About Me
+                    </h3>
+                    <p>Your having about <br>Ramesh Kadariya, An adept web developer, demonstrating expertise in C# for web software development. Driven by a relentless passion for learning and personal growth, I am eager to expand my skill set and venture
+                        into the realm of app development. As a valuable member of our team alongside Rijan, Shreya and Rohit we actively seeks opportunities to excel and embrace the myriad possibilities in pursuit of excellence.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX:</span><br>Desiging Web/App interfaces</li>
+                            <li><span>Web development:</span><br>Web app develpment</li>
+                            <li><span>App Development:</span><br>Andriod/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Professional Experience:</span><br>Develop website for the local Enterprises</li>
+                            <li><span>College Project:</span><br>Actively involvement in college tasks of mobile app development</li>
+                            <li><span>Other content:</span><br>involvement in database management of Local radio company Happy F.M</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Present:</span><br>Bachelor at ISMT College, Chitwan</li>
+                            <li><span>Higher Education:</span><br>Bal Bikas School Of Science And Management</li>
+                            <li><span>Lower Education:</span><br>Bhimsen Addarsha Secondary School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebarGo');
+            if (document.querySelector('.sidebar').classList.contains('sidebarGo')) {
+                document.querySelector('.ham').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+            } else {
+                document.querySelector('.ham').style.display = 'none'
+                setTimeout(() => {
+
+                        document.querySelector('.cross').style.display = 'inline'
+                    }, 300
+
+                )
+
+            }
+
+        })
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>

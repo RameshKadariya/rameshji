@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Ramesh Kadariya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="cointainer">
+        <div class="sidebar sidebarGo">
+
+            <nav>
+                <ul>
+                    <li><a href="/home.html"> Home</a></li>
+                    <li><a href="/myintro.html"> My Intro</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li>
+                        <a href="/Testimonial.html">Testimonial</a>
+                    </li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contact">
+            <div class="hamburger">
+                <img class="ham" src="image/hamburger.png" alt="" width="23px">
+                <img class="cross" src="image/cross-sign.png" alt="" width="23px">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-tittle">Contact Me</h1>
+                        <p><i class="fa-sharp fa-solid fa-paper-plane"></i> hello.contactramesh@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 9847249971</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/ramesh.kadariya.98/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/RameshKadariya5?t=95SHzVfht76EoF1P0Jy_0Q&s=09"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/ramesh.kadariya/"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ramesh-kadariya-638979280"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Enter your Name" required>
+                            <input type="email" name="Email" placeholder="Enter your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Drop Your Message Here"></textarea>
+                            <button type="Submit" class="btn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Copyright © 2023 <em>Ramesh Kadariya.</em> All Rights Reserved.</p>
+                </div>
+            </div>
+
+
+            <script>
+                document.querySelector('.cross').style.display = 'none';
+                document.querySelector('.hamburger').addEventListener("click", () => {
+                    document.querySelector('.sidebar').classList.toggle('sidebarGo');
+                    if (document.querySelector('.sidebar').classList.contains('sidebarGo')) {
+                        document.querySelector('.ham').style.display = 'inline'
+                        document.querySelector('.cross').style.display = 'none'
+                    } else {
+                        document.querySelector('.ham').style.display = 'none'
+                        setTimeout(() => {
+
+                                document.querySelector('.cross').style.display = 'inline'
+                            }, 300
+
+                        )
+
+                    }
+
+                })
+            </script>
+            <script>
+                const scriptURL = '<https://script.google.com/macros/s/AKfycbwY0JZypQOdFUq8GOnlFEl9lqV0ejrknqj9PBKpuVlWcMhL1yRoeqGFJrfBIhXjnPHZzw/exec>'
+                const form = document.forms['submit-to-google-sheet']
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, {
+                            method: 'POST',
+                            body: new FormData(form)
+                        })
+                        .then(response => console.log('Success!', response))
+                        .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+
+
+</body>
+
+</html>

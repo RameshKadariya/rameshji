@@ -1,0 +1,467 @@
+/* Common styles for all screen sizes */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background: url('image/back.jpg');
+    background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styles for larger screens */
+.sidebar {
+    position: absolute;
+    background-color: rgb(58, 63, 64);
+    /* width: 350px; */
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    transition: transform 0.3s ease-in;
+}
+
+.sidebar nav {
+    padding: 30px;
+    color: rgb(13, 172, 19);
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 30px;
+    padding: 30px 0px;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: rgb(13, 172, 19);
+}
+
+.main {
+    width: 80vh;
+}
+
+.cointainer {
+    display: flex;
+}
+
+.infocointainer {
+    height: 58vh;
+    width: 150vh;
+    margin: 150px 125px;
+    /* margin: 144px auto; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.devinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-left: 633px; */
+}
+
+.hello {
+    font-size: 65px;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: 'Source Code Pro', monospace; */
+    color: rgb(41, 123, 238);
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    color: rgb(27, 25, 25);
+}
+
+.about {
+    font-size: 50px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(216, 244, 81);
+}
+
+.main .option {
+    margin-left: 15px;
+    height: 75px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.option li {
+    list-style: none;
+    color: rgb(244, 59, 22);
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 5s steps(4) infinite;
+    margin-left: 55px;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.button {
+    margin-top: 22px;
+}
+
+.button button {
+    cursor: pointer;
+    background-color: rgb(47, 25, 211);
+    color: rgb(245, 241, 241);
+    width: 150px;
+    height: 35px;
+    border-radius: 25em;
+    border: 2px solid blue;
+}
+
+.button button:hover {
+    background-color: white;
+    color: black;
+}
+
+.devpic img {
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+}
+
+.devpic {
+    /* display: none; */
+}
+
+/* Contact styles */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.sub-tittle {
+    margin-left: 120px;
+}
+
+.contact-left p i {
+    margin-right: 15px;
+    color: #e70e0e;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.contact-left p i:hover {
+    color: rgb(41, 9, 223);
+    transform: translate(+5px);
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ca1f1f;
+    display: inline-block;
+    transition: transform 0.5s;
+    margin-left: 10px;
+}
+
+.social-icons a:hover {
+    color: rgb(41, 9, 223);
+    transform: translate(+5px);
+}
+
+.btn {
+    cursor: pointer;
+    background-color: rgb(244, 11, 42);
+    color: rgb(21, 20, 21);
+    font-weight: bold;
+    width: 125px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 255, 204);
+}
+
+.btn:hover {
+    background-color: rgb(155, 165, 234);
+    color: black;
+}
+
+.contact-right {
+    width: 110%;
+    margin-left: 10px;
+}
+
+form input,
+form textarea {
+    text-align: center;
+    width: 90%;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0px;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 6px;
+}
+
+.contact-right form {}
+
+/* My Intro styles */
+#about {
+    padding: 50px 0;
+    color: #1b1a1a;
+}
+
+.row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sub-title {
+    font-family: monospace;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+    color: rgb(237, 20, 20);
+    text-decoration: solid;
+    margin-top: 10px;
+}
+
+.about-me {
+    font-size: 25px;
+    color: rgb(27, 26, 26);
+    margin-left: 55px;
+    margin-top: 2px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 80%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 0px -30px;
+    font-size: 20px;
+}
+
+.tab-contents ul li span {
+    color: rgb(57, 18, 211);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Hamburger and cross bar */
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+.ham {
+    margin-top: 10px;
+}
+
+.cross {
+    margin-left: 190px;
+}
+
+.sidebarGo {
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+
+/* Services styles */
+#services {
+    padding: 30px 0;
+    /* overflow: hidden; */
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.services-list img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.services-list a i:hover {
+    color: rgb(73, 22, 243);
+}
+
+.services-list div {
+    background: rgb(66, 223, 14);
+    color: white;
+    padding: 40px;
+    font-size: 1.3em;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.5s;
+}
+
+.sub-title-1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: -2em;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: rgb(242, 249, 245);
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: rgb(230, 24, 5);
+    transform: translate(-10px);
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebarGo {
+        transform: translate(0, 0);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .cross {
+        display: none;
+    }
+
+    .cointainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infocointainer {
+        margin: 50px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .devinfo {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .hello {
+        font-size: 40px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .about {
+        font-size: 35px;
+    }
+
+    .main .option {
+        margin-left: 0;
+    }
+
+    .option li {
+        font-size: 40px;
+    }
+
+    .devpic img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .tab-titles {
+        justify-content: center;
+        margin: 10px 0 20px;
+    }
+
+    .tab-links {
+        font-size: 15px;
+    }
+
+    .tab-contents ul li {
+        font-size: 16px;
+    }
+
+    .services-list div {
+        padding: 30px;
+        font-size: 1.2em;
+    }
+
+    .sub-title-1 {
+        font-size: 1.5em;
+    }
+}
